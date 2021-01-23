@@ -158,13 +158,27 @@ columns=np.flip(a,axis=1)                                                  #Flip
 Reshaping and flattening multidimensional arrays
 ---------------------------------------------------------------------------
 a=np.array([[1,2,3,],[4,5,6]])
-b=a.ravel()                                                     #Ravel is a view, flatten is a copy
+b=a.ravel()                                                                 #Ravel is a view, flatten is a copy
 c=a.flatten()
-"""
+---------------------------------------------------------------------------
+
+Mean Square Error
+---------------------------------------------------------------------------
 a=np.array([[1,2,3,],[4,5,6]])
 
 
 predicted = np.array([1,42,5,8,1,2])
 actual = np.array([14,123,64,23,2,1])
 mean_square_error = 1/3 * np.sum(np.square(predicted-actual))
-mean_square_error
+---------------------------------------------------------------------------
+
+How to save and load NumPy objects
+---------------------------------------------------------------------------
+a=np.array([1,2,3,4,5,6])
+np.save('One-Six',a)                                                #Saves the array
+b=np.load('One-Six.npy')                                            #Loads the array
+
+np.savetxt('One-Six.cvs',a)                                         #Save the array as a cvs or text file
+np.loadtxt('One-Six.cvs')                                           #Load the array as a cvs or text file
+"""
+
