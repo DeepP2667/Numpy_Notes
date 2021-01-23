@@ -182,3 +182,5 @@ np.savetxt('One-Six.cvs',a)                                         #Save the ar
 np.loadtxt('One-Six.cvs')                                           #Load the array as a cvs or text file
 """
 
+a=np.array([12,3,43])
+print(a)
